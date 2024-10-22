@@ -1,0 +1,15 @@
+[core]
+	pager = "/nix/store/10wid9ncsv6n31nzxi4zzh78vh3bkxfi-delta-0.18.2/bin/delta"
+
+[credential]
+	helper = "/nix/store/g5rxk367087wl8nb6lizkbnag611yqh0-git-2.46.0/bin/git-credential-libsecret"
+
+[init]
+	defaultBranch = "main"
+
+[interactive]
+	diffFilter = "/nix/store/10wid9ncsv6n31nzxi4zzh78vh3bkxfi-delta-0.18.2/bin/delta --color-only"
+
+[user]
+	email = "warrenlin1688@gmail.com"
+	name = "KaitoTLex"

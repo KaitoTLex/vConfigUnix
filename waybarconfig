@@ -1,0 +1,144 @@
+[
+  {
+    "backlight": {
+      "format": "󰖨 {percent}%",
+      "interval": 2,
+      "on-scroll-down": "/nix/store/5sapnnqarcxqiqwcpqfqjj6hhhy6fprr-brightnessctl-0.5.1/bin/brightnessctl -d amdgpu_bl2 set 10%-",
+      "on-scroll-up": "/nix/store/5sapnnqarcxqiqwcpqfqjj6hhhy6fprr-brightnessctl-0.5.1/bin/brightnessctl -d amdgpu_bl2 set 10%"
+    },
+    "battery": {
+      "format": "{icon} {capacity}%",
+      "format-icons": [
+        "󰂎",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ],
+      "interval": 10,
+      "tooltip": true,
+      "tooltip-format": "{timeTo}"
+    },
+    "clock": {
+      "format": "{:%H:%M:%S}",
+      "interval": 1
+    },
+    "cpu": {
+      "format": " {usage}%",
+      "interval": 10
+    },
+    "disk": {
+      "format": "󰋊 {percentage_used}%",
+      "intervel": 30,
+      "tooltip-format": "{used} used out of {total} on \"{path}\" ({percentage_used}%)"
+    },
+    "height": 28,
+    "hyprland/window": {
+      "icon": true,
+      "icon-size": 20,
+      "max-length": 50,
+      "rewrite": {
+        "(.*) — chromium": "$1",
+        "(.*) — firefox": "$1",
+        "^$": "👾"
+      }
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "active": "",
+        "default": "",
+        "empty": "",
+        "special": "󰠱",
+        "urgent": ""
+      },
+      "persistent-workspaces": {
+        "*": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "show-special": true
+    },
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+        "activated": "󰛊 ",
+        "deactivated": "󰾫 "
+      }
+    },
+    "layer": "top",
+    "margin": "5px 10px 0px 10px",
+    "memory": {
+      "format": " {used}",
+      "interval": 10,
+      "tooltip-format": "{used}GiB used of {total}GiB ({percentage}%)"
+    },
+    "mode": "top",
+    "modules-left": [
+      "sway/workspaces",
+      "sway/window"
+    ],
+    "modules-right": [
+      "tray",
+      "idle_inhibitor",
+      "backlight",
+      "wireplumber",
+      "network",
+      "battery",
+      "disk",
+      "memory",
+      "cpu",
+      "temperature",
+      "clock"
+    ],
+    "name": "bar0",
+    "network": {
+      "format": "{ifname}",
+      "format-disconnected": "󰤯 Disconnected",
+      "format-ethernet": " {essid}",
+      "format-icons": [
+        "󰤟 ",
+        "󰤢 ",
+        "󰤨 "
+      ],
+      "format-wifi": "{icon}{essid}",
+      "tooltip-format": "  {bandwidthUpBits} |   {bandwidthDownBits}",
+      "tooltip-format-wifi": "   {bandwidthUpBits} |    {bandwidthDownBits} | 󱄙   {signalStrength}"
+    },
+    "position": "top",
+    "reload_style_on_change": true,
+    "spacing": 10,
+    "temperature": {
+      "interval": 10
+    },
+    "wireplumber": {
+      "format": "{icon} {volume}%",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "format-muted": "󰝟 ",
+      "on-click": "pamixer -t",
+      "on-scroll-down": "/nix/store/1xa0rxm3d51sbk81ismi29cnd4vw6sfz-pamixer-1.6/bin/pamixer set 5%-",
+      "on-scroll-up": "/nix/store/1xa0rxm3d51sbk81ismi29cnd4vw6sfz-pamixer-1.6/bin/pamixer set 5%+"
+    }
+  }
+]
